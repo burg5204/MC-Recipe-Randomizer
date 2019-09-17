@@ -15,3 +15,5 @@ This tool will scramble every type of recipe there is in the game such as crafti
 - Place all the vanilla JSON files for the recipes inside that folder.
 - Run the script `python scrambler.py name.zip`.
 - Put zip file that is generated into a folder named `datapacks` inside your world folder.
+#### Blacklist
+  Blacklist needs a filename (without the extension) per line. If you don't want a blacklist leave the file empty, don't delete it!
