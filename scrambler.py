@@ -12,8 +12,12 @@ if len(sys.argv) < 2:
 else:
     datapack_path = sys.argv[1]
 
-blacklist = list(map(lambda s: s.strip(), open(
+try:
+    blacklist = list(map(lambda s: s.strip(), open(
     "blacklist.txt", "r").readlines()))
+except FileNotFoundError:
+    print("No blacklist detected, ignoring...")
+    blacklist = []
 all_data = {}  # key is the filename, value is the object data.
 for file_handler in os.scandir('crafting_files/'):
     (basename, ext) = os.path.splitext(file_handler.name)
